@@ -75,10 +75,52 @@ BuddyAllocator/
 
 ### Compilation
 
-For optimal performance, compile with optimizations enabled:
+## Compilation
 
-```bash
-g++ -O3 -g BuddyAllocator.cpp -o output
+### Compiling the BuddyAllocator as a static library:
+```
+$ make libbuddy.a
+```
+
+### Compiling the BuddyAllocator as a shared library:
+```
+$ make libbuddy.so
+```
+
+### Compiling and running the tests against the static library:
+```
+$ make test_static
+$ ./tests/test
+```
+
+### Compiling and running the tests against the shared library:
+```
+$ make test_shared
+$ ./tests/test
+```
+
+## Integration
+
+### Linking the static library:
+To link the BuddyAllocator's static library with your project, you need to include the path to the `libbuddy.a` and the include path in your compile and link commands. For instance:
+
+```
+$ g++ your_source_file.cpp -Ipath_to_buddy_allocator_include_folder -Lpath_to_buddy_allocator_lib_folder -lbuddy
+```
+
+### Linking the shared library:
+To link the BuddyAllocator's shared library, do the following:
+
+```
+$ g++ your_source_file.cpp -Ipath_to_buddy_allocator_include_folder -Lpath_to_buddy_allocator_lib_folder -lbuddy
+```
+
+Make sure to have the directory containing `libbuddy.so` in your `LD_LIBRARY_PATH` or use `rpath` or `runpath`.
+
+## Clean Build Artifacts:
+To clean all build artifacts, use:
+```
+$ make clean
 ```
 
 ### Visual Studio Setup
