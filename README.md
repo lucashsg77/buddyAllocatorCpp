@@ -22,6 +22,43 @@ The Buddy Allocator is a memory allocation system that divides memory into parti
 - **Thread Safety**: The allocator is thread-safe, ensuring that multiple threads can allocate and deallocate memory without issues.
 - **Fixed Overhead**: Block metadata is stored directly within the block, ensuring a consistent overhead.
 
+## Projects and Use Cases
+
+### 1. **Real-time Systems**
+Real-time systems, such as those in automotive or aerospace applications, require predictable memory management performance. The Buddy Allocation system can provide consistent allocation and deallocation times, making it a suitable choice for such applications.
+
+### 2. **Memory-Constrained Embedded Systems**
+In systems where memory is a scarce resource, efficient utilization of available memory is critical. The Buddy Allocation system can help reduce fragmentation, ensuring maximum use of available memory.
+
+### 3. **Gaming and Graphics**
+In video game development, especially in the realm of graphics, dynamic memory allocation is a frequent operation. The Buddy Allocation system can help in managing memory pools for objects like textures, shaders, and meshes.
+
+### 4. **Database Systems**
+Databases often require dynamic memory allocation for operations like indexing, caching, and query processing. Using a memory management system like Buddy Allocator can ensure efficient and predictable performance.
+
+### 5. **Networking**
+In network programming, especially in high-performance servers, handling a massive number of simultaneous connections can necessitate dynamic memory allocation. The Buddy Allocation system can be used to manage connection buffers, packets, and other network-related structures.
+
+### 6. **Operating Systems**
+The Buddy Allocation algorithm itself originated in the context of operating system design. It can be used in OS development for kernel memory allocation.
+
+### 7. **Simulations**
+In scientific simulations, there are scenarios where objects or entities are created and destroyed dynamically. The Buddy Allocation system can be used to manage memory in such simulations efficiently.
+
+### 8. **Custom Memory Allocators for Libraries**
+Developers can use the Buddy Allocation system to build custom memory allocators tailored for specific data structures or algorithms, ensuring optimal performance.
+
+## Actual Cases of Using Buddy Allocation:
+
+### 1. **Linux Kernel**
+The Linux kernel has historically used a form of the Buddy Allocation system for page allocation, ensuring efficient use of memory with reduced fragmentation.
+
+### 2. **High-Performance Computing (HPC)**
+In HPC environments where performance is paramount, custom memory allocators based on Buddy Allocation have been developed to cater to specific workloads.
+
+### 3. **Embedded Systems**
+Many embedded systems, especially those that run real-time operating systems (RTOS), use Buddy Allocation or similar algorithms to manage memory efficiently.
+
 ## Getting Started
 
 ### Folder Layout
