@@ -75,8 +75,6 @@ BuddyAllocator/
 
 ### Compilation
 
-## Compilation
-
 ### Compiling the BuddyAllocator as a static library:
 ```
 $ make libbuddy.a
