@@ -73,7 +73,7 @@ BuddyAllocator/
 `-- README.md
 ```
 
-### Compilation
+## Compilation
 
 ### Compiling the BuddyAllocator as a static library:
 ```
@@ -124,7 +124,7 @@ $ make clean
 ### Visual Studio Setup
 
 1. Create a new Empty Project in Visual Studio.
-2. Add `BuddyAllocator.cpp` and `BuddyAllocator.h` to the project's source files.
+2. Add `BuddyAllocator.cpp` and `BuddyAllocator.hpp` to the project's source files.
 3. Set the optimization level to `/O2` for best performance in the project properties.
 4. Build and run the project.
 
@@ -133,7 +133,7 @@ $ make clean
 ### Basic Allocation and Deallocation
 
 ```cpp
-#include "BuddyAllocator.h"
+#include "BuddyAllocator.hpp"
 
 int main() {
     BuddyAllocator allocator(1024, 32); // 1KB total memory, 32 bytes minimum block size
@@ -147,7 +147,7 @@ int main() {
 ### Using with Custom Classes
 
 ```cpp
-#include "BuddyAllocator.h"
+#include "BuddyAllocator.hpp"
 
 class MyClass {
 public:
