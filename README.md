@@ -115,13 +115,13 @@ $ g++ your_source_file.cpp -Ipath_to_buddy_allocator_include_folder -Lpath_to_bu
 
 Make sure to have the directory containing `libbuddy.so` in your `LD_LIBRARY_PATH` or use `rpath` or `runpath`.
 
-## Clean Build Artifacts:
+### Clean Build Artifacts:
 To clean all build artifacts, use:
 ```
 $ make clean
 ```
 
-### Visual Studio Setup
+## Visual Studio Setup
 
 1. Create a new Empty Project in Visual Studio.
 2. Add `BuddyAllocator.cpp` and `BuddyAllocator.hpp` to the project's source files.
