@@ -65,12 +65,17 @@ Many embedded systems, especially those that run real-time operating systems (RT
 
 ```
 BuddyAllocator/
+|-- include/
+|   |-- BuddyAllocator.hpp     # Header file with the Buddy Allocator class declaration
+|   `-- myClass.hpp            # Header file with the MyClass class declaration
+|   `-- tests.hpp              # Header file for the test utilities
 |-- src/
-|   |-- BuddyAllocator.cpp  # Implementation of the Buddy Allocator
-|   `-- BuddyAllocator.h    # Header file with the Buddy Allocator class declaration
+|   |-- BuddyAllocator.cpp     # Implementation of the Buddy Allocator
+|   `-- myClass.cpp            # Implementation of the MyClass
 |-- tests/
-|   `-- test.cpp            # Test cases for the Buddy Allocator
+|   |-- tests.cpp              # Test cases for the Buddy Allocator and MyClass
 `-- README.md
+
 ```
 
 ## Compilation
